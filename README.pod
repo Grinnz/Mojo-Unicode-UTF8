@@ -1,28 +1,4 @@
-package Mojo::Unicode::UTF8;
-
-use strict;
-use warnings;
-use Mojo::Util 'decode', 'encode', 'monkey_patch';
-use Unicode::UTF8 'decode_utf8', 'encode_utf8';
-
-our $VERSION = '0.001';
-
-monkey_patch 'Mojo::Util', 'decode', sub {
-	goto &decode unless $_[0] eq 'UTF-8';
-	my ($encoding, $bytes) = @_;
-	return undef unless eval {
-		use warnings FATAL => 'utf8';
-		$bytes = decode_utf8 $bytes; 1
-	};
-	return $bytes;
-};
-
-monkey_patch 'Mojo::Util', 'encode', sub {
-	goto &encode unless $_[0] eq 'UTF-8';
-	return encode_utf8 $_[1];
-};
-
-1;
+=pod
 
 =head1 NAME
 
@@ -65,3 +41,4 @@ This is free software, licensed under:
 
 =head1 SEE ALSO
 
+=cut
