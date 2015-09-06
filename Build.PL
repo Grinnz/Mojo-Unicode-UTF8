@@ -17,7 +17,7 @@ if (not @missing)
     use strict;
     use warnings;
 
-    use 5.006;
+    use 5.010001;
     # use Module::Build::Tiny 0.034;
     Module::Build::Tiny::Build_PL();
 }
@@ -77,13 +77,14 @@ EOW
         "Dan Book <dbook\@cpan.org>"
       ],
       "dist_name" => "Mojo-Unicode-UTF8",
-      "dist_version" => "0.001",
+      "dist_version" => "0.002",
       "license" => "artistic_2",
       "module_name" => "Mojo::Unicode::UTF8",
       "recursive_test_files" => 1,
       "requires" => {
         "Mojolicious" => "6.0",
-        "Unicode::UTF8" => "0.58"
+        "Unicode::UTF8" => "0.58",
+        "perl" => "5.010001"
       },
       "test_requires" => {
         "Test::More" => "0.88"
