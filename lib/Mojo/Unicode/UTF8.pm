@@ -5,7 +5,7 @@ use warnings;
 use Mojo::Util 'decode', 'encode', 'monkey_patch';
 use Unicode::UTF8 'decode_utf8', 'encode_utf8';
 
-our $VERSION = '0.002';
+our $VERSION = '0.003';
 
 monkey_patch 'Mojo::Util', 'decode', sub {
 	goto &decode unless $_[0] eq 'UTF-8';
