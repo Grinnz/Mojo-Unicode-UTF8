@@ -66,3 +66,4 @@ This is free software, licensed under:
 
 =head1 SEE ALSO
 
+L<Mojo::Util>, L<Unicode::UTF8>, L<Encode>
