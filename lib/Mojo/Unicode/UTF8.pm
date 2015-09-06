@@ -10,6 +10,7 @@ our $VERSION = '0.002';
 monkey_patch 'Mojo::Util', 'decode', sub {
 	goto &decode unless $_[0] eq 'UTF-8';
 	my ($encoding, $bytes) = @_;
+	local $@;
 	return undef unless eval {
 		use warnings FATAL => 'utf8';
 		$bytes = decode_utf8 $bytes; 1
