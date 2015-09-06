@@ -43,9 +43,10 @@ Mojo::Unicode::UTF8 - use Unicode::UTF8 as the UTF-8 encoder for Mojolicious
 
 L<Mojo::Unicode::UTF8> is a monkey-patch module for using L<Unicode::UTF8> as
 the UTF-8 encoder for a L<Mojolicious> application, or anything else using
-L<Mojo::Util>. Calling L<Mojo::Util/"decode"> or L<Mojo::Util/"encode"> with
-any encoding other than C<UTF-8> will fall back to L<Encode> as normal. For
-details on the benefits, see L<Unicode::UTF8/"COMPARISON">.
+L<Mojo::Util>. It must be loaded before L<Mojo::Util> so the new functions will
+be properly exported. Calling L<Mojo::Util/"decode"> or L<Mojo::Util/"encode">
+with any encoding other than C<UTF-8> will fall back to L<Encode> as normal.
+For details on the benefits, see L<Unicode::UTF8/"COMPARISON">.
 
 =head1 BUGS
 
