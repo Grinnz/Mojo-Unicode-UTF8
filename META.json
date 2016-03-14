@@ -4,7 +4,7 @@
       "Dan Book <dbook@cpan.org>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 5.039, CPAN::Meta::Converter version 2.150005",
+   "generated_by" : "Dist::Zilla version 5.043, CPAN::Meta::Converter version 2.150005",
    "license" : [
       "artistic_2"
    ],
@@ -15,12 +15,12 @@
    "name" : "Mojo-Unicode-UTF8",
    "no_index" : {
       "directory" : [
-         "t",
-         "xt",
+         "eg",
+         "examples",
          "inc",
          "share",
-         "eg",
-         "examples"
+         "t",
+         "xt"
       ]
    },
    "prereqs" : {
@@ -31,7 +31,6 @@
       },
       "develop" : {
          "requires" : {
-            "Dist::Zilla::PluginBundle::Author::DBOOK" : "0.018",
             "Test::Pod" : "1.41"
          }
       },
@@ -51,7 +50,7 @@
    "provides" : {
       "Mojo::Unicode::UTF8" : {
          "file" : "lib/Mojo/Unicode/UTF8.pm",
-         "version" : "0.002"
+         "version" : "0.003"
       }
    },
    "release_status" : "stable",
@@ -66,7 +65,7 @@
          "web" : "https://github.com/Grinnz/Mojo-Unicode-UTF8"
       }
    },
-   "version" : "0.002",
+   "version" : "0.003",
    "x_contributors" : [
       "Dan Book <grinnz@grinnz.com>"
    ]
